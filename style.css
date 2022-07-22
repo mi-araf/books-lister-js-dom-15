@@ -1,0 +1,101 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap');
+
+* {
+    font-family: 'Cormorant SC', serif;
+}
+
+.container {
+    margin-top: 1.5rem;
+}
+
+header {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #deeaf6 10%, #f5eefa 90%);
+}    
+
+input[type=text] {
+    width: 46%;
+    box-sizing: border-box;
+    border-radius: 11px;
+    border: 2px solid #9eacf2;
+    font-size: 1rem;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 5px 30px;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+    width: 75%;
+}
+
+#book-list ul {
+    padding-bottom: 11px;
+}
+
+#book-list li{
+    list-style-type: none;
+    padding: 1.2rem;
+    border-left: 6px solid #ddd;
+    margin: 1rem 0.7rem;
+    font-size: larger;
+}
+#book-list li:hover{
+    border-color: #6e729e;
+    color: #2b58e0;
+    cursor: pointer;
+}
+
+li:nth-child(even) {
+    background-color: #eff7fe;
+}
+li:nth-child(odd) {
+    background-color: #fdf4f4;
+}
+
+.delete {
+    font-size: medium;
+    cursor: pointer;
+    color: white;
+    border: 2px solid rgb(199, 170, 225);
+    float: right;
+    background: #6d84dc;
+    padding: 5px;
+    border-radius: 4px;
+}
+.delete:hover {
+    background-color: #3462ef;
+}
+
+#add-book :nth-child(1) {
+    text-align: center;
+    font-size: large;
+    padding-bottom: 0.8rem;
+}
+#add-book :nth-child(2) {
+    text-align: center;
+}
+
+
+#pills-tab div {
+    font-size: 1.2rem;
+    border: 2px solid rgb(194, 194, 230);
+    border-radius: 10px;
+}
+
+
+
+/* mobile first */
+@media only screen and (max-width: 768px) {
+    input[type=text] {
+        width: 72%;
+    }
+
+    #book-list li {
+        margin-left: 0;
+    }
+    .delete {
+        font-size: small;
+    }
+}
