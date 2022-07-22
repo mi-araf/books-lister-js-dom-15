@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Mushfiq Araf">
     <title>Book Lister</title>
+    <link rel="shortcut icon" href="./search.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./style.css">
 
@@ -19,7 +20,7 @@
 <div class="container shadow p-3 mb-5 rounded">
 
     <!-- header -->
-    <header class="shadow p-3 mb-5 rounded text-center p-5">
+    <header class="shadow mb-5 rounded text-center p-4">
         <h1 class="lh-base">Books Hunters</h1>
         <h5 class="lh-lg">Books for all</h5>
         <form class="lh-base" id="search-box">
@@ -30,8 +31,7 @@
     <hr>
 
     <main id="book-list" class="py-2">
-        <h2 class="ms-3"><i class="fa fa-book">&nbsp;&Leftrightarrow;&nbsp;</i>Books to Read & Share</h2>
-
+        <h2 class="ms-3"><i class="fa fa-book">&nbsp;&nesear; &nbsp;</i>Books to Read & Share</h2>
         <!-- books -->
         <ul>
             <li>
@@ -52,14 +52,14 @@
             </li>
         </ul>
 
-        <!-- hide -->
+        <!-- hide & Add -->
         <form id="add-book">
             <div>
                 <input type="checkbox" name="" id="hide"> &nbsp;
                 <label for="hide">Hide above books?</label>
             </div>
             <div>
-                <input type="text" placeholder="Add a Book....">
+                <input type="text" placeholder="Add a Book...." required>
                 <button type="submit" class="btn btn-secondary">Add</button>
             </div>
         </form>
@@ -96,10 +96,9 @@
 
 
 </div>
-    
 
 
-
+    <script src="./script.js"></script>
     <!-- Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>

@@ -51,7 +51,7 @@ li:nth-child(even) {
     background-color: #eff7fe;
 }
 li:nth-child(odd) {
-    background-color: #fdf4f4;
+    background-color: #fff2f2;
 }
 
 .delete {
@@ -71,7 +71,7 @@ li:nth-child(odd) {
 #add-book :nth-child(1) {
     text-align: center;
     font-size: large;
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
 }
 #add-book :nth-child(2) {
     text-align: center;
@@ -88,6 +88,9 @@ li:nth-child(odd) {
 
 /* mobile first */
 @media only screen and (max-width: 768px) {
+    .container {
+        margin-top: 0;
+    }
     input[type=text] {
         width: 72%;
     }
