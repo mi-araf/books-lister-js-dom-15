@@ -1,5 +1,7 @@
 const list = document.querySelector("#book-list ul");
 const addButton = document.querySelector("#add-book :nth-child(2) button");
+const hide = document.querySelector("#hide");
+const searchBooks = document.querySelector('#search-box input');
 
 
 // start --------------- delete books
@@ -11,7 +13,7 @@ list.addEventListener('click', function(e) {
 });
 
 
-// start ----------------- add books
+// start --------------- add books
 addButton.addEventListener('click', function(e) {
     e.preventDefault();
     
@@ -45,4 +47,36 @@ addButton.addEventListener('click', function(e) {
         alert("Please add a Book Name");
     }
 
+})
+
+
+// start ------------  'hide' books
+hide.addEventListener('change', function() {
+    if (hide.checked) {
+        list.style.display = 'none';
+    } else {
+        list.style.display = 'block';
+    }
+})
+
+
+// start ------------ 'search' books / filter books
+searchBooks.addEventListener('keyup', function(e) {
+    // 1. grab the input value from user
+    const term = e.target.value.toLowerCase();
+
+    // 2. grab all the 'li' tags
+    const books = list.getElementsByTagName('li');
+
+    // 3. cycle/loop through those 'li' tag to get matched items, so turn 'books' into an array
+    Array.from(books).forEach(function(book) {
+        const bookName = book.firstElementChild.innerText;      // .text-content
+        
+        // 4. now compare the book Name with user input (-1 => not ok)
+        if (bookName.toLowerCase().indexOf(term) != -1) {
+            book.style.display = 'block';
+        } else {
+            book.style.display = 'none';
+        }
+    })
 })

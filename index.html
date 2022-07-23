@@ -22,7 +22,8 @@
     <!-- header -->
     <header class="shadow mb-5 rounded text-center p-4">
         <h1 class="lh-base">Books Hunters</h1>
-        <h5 class="lh-lg">Books for all</h5>
+        <h4 class="lh-base">Books for all</h4>
+        <h6 class="lh-lg">&copy; Mushfiq Araf</h6>
         <form class="lh-base" id="search-box">
             <span class="fa fa-search icon"></span>
             <input type="text" id="" name="search" placeholder="Search Books..." data-mdb-showcounter="true" maxlength="35" />
@@ -39,11 +40,15 @@
                 <button class="delete">Delete</button>
             </li>
             <li>
-                <span class="name">Things Fall Apart</span>
+                <span class="name">Tas, An Execution Bird</span>
                 <button class="delete">Delete</button>
             </li>
             <li>
                 <span class="name">To Kill a Mockingbird</span>
+                <button class="delete">Delete</button>
+            </li>
+            <li>
+                <span class="name">Things Fall Apart</span>
                 <button class="delete">Delete</button>
             </li>
             <li>
@@ -56,7 +61,7 @@
         <form id="add-book">
             <div>
                 <input type="checkbox" name="" id="hide"> &nbsp;
-                <label for="hide">Hide above books?</label>
+                <label for="hide" style="cursor: pointer;">Hide above books?</label>
             </div>
             <div>
                 <input type="text" placeholder="Add a Book...." required>
